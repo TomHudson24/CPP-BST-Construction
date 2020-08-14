@@ -1,6 +1,7 @@
 #pragma once
 #include "BST_Base.h"
 #include <vector>
+#include <iostream>
 class BST_Iterative :
     public BST_Base
 {
