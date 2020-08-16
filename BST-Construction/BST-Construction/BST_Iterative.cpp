@@ -58,7 +58,7 @@ BST_Iterative& BST_Iterative::insert(int val) {
 		return false;//value not found and the while loop has ended due to the currentNode being on a non existent leaf
 	}
 
-	BST_Iterative& BST_Iterative::remove(int val, BST_Base* parentNode) {
+	BST_Iterative& BST_Iterative::remove(int val, BST_Iterative* parentNode) {
 		// Write your code here.
 		BST_Iterative* currentNode = this;
 		while (currentNode != NULL)
@@ -117,21 +117,25 @@ BST_Iterative& BST_Iterative::insert(int val) {
 	void BST_Iterative::printTreeBranchValues(int val)
 	{
 		BST_Iterative* currentNode = this;
+		std::cout << "\nTree starts: " << currentNode->value << " ";
 		while (currentNode != NULL)//as long as it isn't pointing to nothing
 		{
+			
 			if (val < currentNode->value)//go down left sub tree
 			{
-				std::cout << value << ", ";
+				
 				currentNode = currentNode->left;//move along the left subtree's branch
+				std::cout << currentNode->value << " ";
 			}
 			else if (val > currentNode->value)//go down right sub tree
 			{
-				std::cout << value << ", ";
+				
 				currentNode = currentNode->right;//move along the right subtree's branch
+				std::cout << currentNode->value << " ";
 			}
 			else
 			{
-				std::cout << value;
+				
 				break;
 			}
 		}

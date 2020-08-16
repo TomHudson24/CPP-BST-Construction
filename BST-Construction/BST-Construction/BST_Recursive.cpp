@@ -61,7 +61,7 @@ bool BST_Recursive::contains(int val)
 	}
 }
 
-BST_Recursive& BST_Recursive::remove(int val, BST_Base* parent)
+BST_Recursive& BST_Recursive::remove(int val, BST_Recursive* parent)
 {
 	// Write your code here.
 	if (val < value)//go down the left subtree

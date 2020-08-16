@@ -13,7 +13,7 @@ public:
     BST_Iterative(int val) : value(val), left(NULL), right(NULL) {}
     BST_Iterative& insert(int val) override;
     bool contains(int val) override;
-    BST_Iterative& remove(int val, BST_Base* parent = NULL) override;
+    BST_Iterative& remove(int val, BST_Iterative* parent = NULL);
 
     void printTreeBranchValues(int val);
 

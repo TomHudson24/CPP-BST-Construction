@@ -12,7 +12,7 @@ public:
     BST_Recursive(int val) : value(val), left(NULL), right(NULL) {}
     BST_Recursive& insert(int val) override;
     bool contains(int val) override;
-    BST_Recursive& remove(int val, BST_Base* parent = NULL) override;
+    BST_Recursive& remove(int val, BST_Recursive* parent = NULL);
 
     void printTreeBranchValues(int val);
    
